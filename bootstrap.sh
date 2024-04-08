@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
+set -e
+
 sudo apt update
-sudo apt install -y nala
-sudo nala install -y ansible
+sudo apt install -y python3-pip
+pip install ansible
 
 mkdir -p /tmp/ansible-setup
 wget -O /tmp/ansible-setup/initialise.yml https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap.yml
