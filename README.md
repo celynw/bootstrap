@@ -18,4 +18,5 @@ The remaining steps are assumed to be in a private repository.
 1. Log into new system
 1. Log into GitHub in Firefox
 1. Run the script by running the command above
+   - The "BECOME password" to be entered is your `sudo` password
 1. Any remaining steps requiring full SSH access to the GitHub account can now be completed
