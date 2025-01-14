@@ -10,6 +10,6 @@ uv venv
 uv pip install ansible
 
 mkdir -p /tmp/ansible-setup
-wget -O /tmp/ansible-setup/initialise.yml https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap.yml
-cd /tmp/ansible-setup && ansible-playbook initialise.yml --ask-become-pass
+wget -O /tmp/ansible-setup/bootstrap.yml https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap.yml
+cd /tmp/ansible-setup && ansible-playbook bootstrap.yml --ask-become-pass
 echo "Now paste your public key and attach to your GitHub account"
