@@ -4,7 +4,9 @@ set -e
 sudo apt update
 sudo apt install -y curl
 curl -LsSf https://astral.sh/uv/install.sh | sh
-. $HOME/.local/bin/env
+if [ -f "$HOME/.local/bin/env" ]; then
+	. "$HOME/.local/bin/env"
+fi
 uv venv
 . ./.venv/bin/activate
 uv pip install ansible
