@@ -5,13 +5,13 @@
 For a desktop distribution:
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap_desktop.sh | sh
+curl -LsSf https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap_desktop.sh | sh
 ```
 
 For a server distribution:
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap_server.sh | sh
+curl -LsSf https://raw.githubusercontent.com/celynw/bootstrap/master/bootstrap_server.sh | sh
 ```
 
 ## Description
