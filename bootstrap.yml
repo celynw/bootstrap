@@ -10,6 +10,20 @@
         repo: "ppa:mozillateam/ppa"
         state: present
 
+    - name: Prefer Firefox DEB rather than Snap
+      become: yes
+      become_user: root
+      copy:
+        content: |
+          Package: *
+          Pin: release o=LP-PPA-mozillateam
+          Pin-Priority: 1001
+
+          Package: firefox
+          Pin: version 1:1snap*
+          Pin-Priority: -1
+        dest: /etc/apt/preferences.d/mozilla-firefox
+
     - name: Ensure packages are installed
       become: yes
       become_user: root
