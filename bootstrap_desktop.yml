@@ -3,6 +3,12 @@
   connection: local
   gather_facts: false
   tasks:
+    - name: Make tasks directory
+      file:
+        path: tasks
+        state: directory
+        mode: 0755
+
     - name: Download other tasks from GitHub
       get_url:
         url: "https://raw.githubusercontent.com/celynw/bootstrap/refs/heads/master/tasks/{{ item }}"
