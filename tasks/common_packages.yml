@@ -1,0 +1,9 @@
+- name: Ensure packages are installed
+  become: yes
+  become_user: root
+  apt:
+    update_cache: yes
+    name:
+      - git
+      - curl
+    state: present

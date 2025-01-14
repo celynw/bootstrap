@@ -1,0 +1,8 @@
+- name: Ensure xclip is installed
+  become: yes
+  become_user: root
+  apt:
+    update_cache: no
+    name:
+      - xclip
+    state: present

@@ -1,0 +1,11 @@
+- name: Check if SSH private key exists
+  ansible.builtin.stat:
+    path: "~/.ssh/id_rsa"
+  register: ssh_key_stat
+
+- name: Generate SSH keypair
+  when: not ssh_key_stat.stat.exists
+  community.crypto.openssh_keypair:
+    path: ~/.ssh/id_rsa
+    size: 2048
+  no_log: true

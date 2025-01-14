@@ -1,0 +1,7 @@
+- name: Generate SSH keypair and register it with GitHub
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - include_tasks: tasks/ssh.yml
+    - include_tasks: tasks/common_packages.yml
